@@ -8,7 +8,7 @@ Stable tag: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Works with Active Directory Integration to take AD octet string and convert them to images which you can use in themes and anywhere you can use WordPress meta info.
+Works with Active Directory Integration to take AD octet string and convert them to images which you can use in themes.
 
 == Description ==
 
