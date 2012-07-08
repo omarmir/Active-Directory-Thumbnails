@@ -18,7 +18,7 @@ Uses Active Directory Integration created data from the AD server to create Imag
 
 Example: 
 
-<img src="<?php echo $user->adt_user_photo_url; ?>" class="thumbnail-css" />
+echo $user->adt_user_photo_url
 
 == Installation ==
 
@@ -39,11 +39,3 @@ Example:
 
 = 0.5 =
 * First release
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
