@@ -20,7 +20,7 @@ Example:
 
 echo $user->adt_user_photo_url
 
-Mir and Windsor Design (http://mirwindsor.com) - We design websites, desktop applications and database platforms from the bottom up. Your local Ottawa information management people!
+Mir and Windsor Design (http://mirwindsor.com) - Ottawa Web Design.
 
 
 == Installation ==
