@@ -20,7 +20,7 @@ Example:
 
 echo $user->adt_user_photo_url
 
-Mir and Windsor Design (http://mirwindsor.com) - Ottawa Web Design.
+Infinity88 (http://infinity88.ca) - Ottawa Web Design.
 
 
 == Installation ==
