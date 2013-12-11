@@ -40,5 +40,8 @@ Infinity88 (http://infinity88.ca) - Ottawa Web Design.
 
 == Changelog ==
 
+= 0.6 =
+* Fix bulk script
+
 = 0.5 =
 * First release

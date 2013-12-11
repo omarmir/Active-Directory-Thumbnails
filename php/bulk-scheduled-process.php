@@ -54,7 +54,7 @@ function adt_get_user_photo($user_id) {
     $pic_str = $user->$ad_field_name;
 
     echo $user->user_nicename;
-    $file_name = ABSPATH . 'wp-content/uploads/active-directory-thumbnails'  . $user->user_nicename . $user_id . '.jpeg';
+    $file_name = ABSPATH . 'wp-content/uploads/active-directory-thumbnails/'  . $user->user_nicename . $user_id . '.jpeg';
     $file_url = get_site_url() . '/wp-content/uploads/active-directory-thumbnails/' . $user->user_nicename . $user_id . '.jpeg';
     if ($pic_str) {
         $data = base64_decode($pic_str);
