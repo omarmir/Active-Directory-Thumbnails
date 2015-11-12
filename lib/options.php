@@ -71,5 +71,8 @@ if($_POST['adt_bulk_url_hidden'] == 'Y') {
     </form>
     <hr />
     <h4><?php _e('Meta Field', 'active-directory-thumbnails' ) ?></h4>
-    <p><?php _e('The meta field for the user photo for themes/plugins:', 'active-directory-thumbnails' ) ?> <b>adt_user_photo_url</b></p>
+    <p>
+        <?php _e('The meta field for the user photo for themes/plugins:', 'active-directory-thumbnails' ) ?> <b>adt_user_photo_url</b><br>
+        <?php _e('The meta field for the user photo filename for themes/plugins (if the upload directory is expected to change):', 'active-directory-thumbnails' ) ?> <b>adt_user_photo_filename</b>
+    </p>
 </div>

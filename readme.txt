@@ -1,7 +1,7 @@
 === Active Directory Thumbnails ===
 Contributors: MirWindsor - Omar
 Donate link: 
-Tags: authentication, active directory, ldap, authorization, security, windows
+Tags: authentication, active directory, ldap, authorization, security, windows, avatar, photo
 Requires at least: 3.0
 Tested up to: 3.3.1
 Stable tag: 0.6
@@ -39,12 +39,13 @@ Infinity88 (http://infinity88.ca) - Ottawa Web Design.
 
 
 == Changelog ==
-== 1.0 ==
+= 1.0 =
 * Switched to WordPress endpoint structure
 * Allow replacing of default avatar with the active directory thumbnails
 * Moved functions into classes
 * Support for translations
 * Added nonces to ensure that not anyone with the endpoint can run the job
+* Changed the way avatar is retrieved, uses configured upload directory instead of picking it for you
 
 = 0.6 =
 * Fix bulk script

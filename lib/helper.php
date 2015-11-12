@@ -3,7 +3,14 @@ if (!class_exists('adt_i88_helper')) {
 
 	class adt_i88_helper {
 
+		public static $uploadDir;
+
+		public function __construct() {
+			self::$uploadDir = wp_upload_dir();
+		}
+
 		public static function adt_delete_folder($directory, $empty = false) {
+
 			if (substr($directory, -1) == "/") {
 				$directory = substr($directory, 0, -1);
 			}
@@ -20,10 +27,10 @@ if (!class_exists('adt_i88_helper')) {
 					if ($contents != '.' && $contents != '..') {
 						$path = $directory . "/" . $contents;
 						if (is_dir($path)) {
-							deleteAll($path);
+							@self::adt_delete_folder($path);
 						}
 						else {
-							unlink($path);
+							@unlink($path);
 						}
 					}
 				}
@@ -54,14 +61,17 @@ if (!class_exists('adt_i88_helper')) {
 			$ad_field_name = get_option('adt_ad_thumbnail');
 			$pic_str = $user->$ad_field_name;
 
-			$file_name = ABSPATH . 'wp-content/uploads/active-directory-thumbnails/'  . $user->user_nicename . $user_id . '.jpeg';
-			$file_url = get_site_url() . '/wp-content/uploads/active-directory-thumbnails/' . $user->user_nicename . $user_id . '.jpeg';
+			$file_name = $user->user_nicename . $user_id . '.jpeg';
+			$file_dir = self::$uploadDir['basedir'] . '/active-directory-thumbnails/'  . $file_name;
+			$file_url = self::$uploadDir['baseurl'] . '/active-directory-thumbnails/' . $file_name;
+
 			if ($pic_str) {
 				$data = base64_decode($pic_str);
 				$img_data = imagecreatefromstring($data);
-				imagejpeg($img_data, $file_name);
+				imagejpeg($img_data, $file_dir);
 				imagedestroy($img_data);
 				update_user_meta( $user_id, 'adt_user_photo_url', $file_url );
+				update_user_meta( $user_id, 'adt_user_photo_filename', $file_name );
 				_e('Picture processed for user: ', 'active-directory-thumbnails');
 				echo $user->user_nicename . '<br>';
 			} else {
