@@ -39,6 +39,12 @@ Infinity88 (http://infinity88.ca) - Ottawa Web Design.
 
 
 == Changelog ==
+== 1.0 ==
+* Switched to WordPress endpoint structure
+* Allow replacing of default avatar with the active directory thumbnails
+* Moved functions into classes
+* Support for translations
+* Added nonces to ensure that not anyone with the endpoint can run the job
 
 = 0.6 =
 * Fix bulk script
