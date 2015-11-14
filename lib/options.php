@@ -2,11 +2,14 @@
 if($_POST['adt_hidden'] == 'Y') {
     $adt_ad_thumbnail = $_POST['adt_adfield'];
     $adt_replace_avatar = $_POST['adt_replace_avatar'];
+    $adt_replace_bp_avatar = $_POST['adt_replace_bp_avatar'];
     update_option('adt_ad_thumbnail', $adt_ad_thumbnail);
     update_option('adt_replace_avatar', $adt_replace_avatar);
+    update_option('adt_replace_bp_avatar', $adt_replace_bp_avatar);
 } else {
     $adt_ad_thumbnail = get_option('adt_ad_thumbnail');
     $adt_replace_avatar = get_option('adt_replace_avatar');
+    $adt_replace_bp_avatar = get_option('adt_replace_bp_avatar');
 }
 
 if($_POST['adt_bulk_url_hidden'] == 'Y') {
@@ -23,10 +26,9 @@ if($_POST['adt_bulk_url_hidden'] == 'Y') {
         <h4><?php _e( 'General Settings', 'active-directory-thumbnails' )?></h4>
         <p>
             <?php _e('Active Directory Integration field name for thumbnail: ', 'active-directory-thumbnails'); ?>
-            <input placeholder="<?php _e(' ex: adi_thumbnailphoto', 'active-directory-thumbnails' ); ?>" type="text" name="adt_adfield" value="<?php echo $adt_ad_thumbnail; ?>" size="30">
-        </p>
-        <p>
+            <input placeholder="<?php _e(' ex: adi_thumbnailphoto', 'active-directory-thumbnails' ); ?>" type="text" name="adt_adfield" value="<?php echo $adt_ad_thumbnail; ?>" size="30"><br>
             <input type="checkbox" name="adt_replace_avatar" value="true" <?php echo $adt_replace_avatar == 'true' ? 'checked' : ''; ?>> <?php _e('Replace default WordPress avatar?', 'active-directory-thumbnails'); ?><br>
+            <input type="checkbox" name="adt_replace_bp_avatar" value="true" <?php echo $adt_replace_bp_avatar == 'true' ? 'checked' : ''; ?>> <?php _e('Replace BuddyPress avatar?', 'active-directory-thumbnails'); ?><br>
         </p>
         <p class="submit">
             <input class="button" type="submit" name="Submit" value="<?php _e('Update Options', 'active-directory-thumbnails' ) ?>" />
@@ -59,7 +61,6 @@ if($_POST['adt_bulk_url_hidden'] == 'Y') {
     <?php
         $adt_bulk_url = add_query_arg('active_directory_thumbnails', '', site_url());
         $adt_bulk_url = add_query_arg('nonce', get_option('adt_nonce', false), $adt_bulk_url);
-        //echo '<a href="' . $adt_bulk_url . ' ">' . $adt_bulk_url . '</a>';
     ?>
     <form name="adt_url" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
         <input type="hidden" name="adt_bulk_url_hidden" value="Y">
