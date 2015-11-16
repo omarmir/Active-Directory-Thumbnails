@@ -22,6 +22,8 @@ echo $user->adt_user_photo_url
 
 Infinity88 (http://infinity88.ca) - Ottawa Web Design.
 
+Plugin asset icons by Freepik's Flaticons (http://www.flaticon.com/) and licensed under Creative Commons BY 3.0
+
 
 == Installation ==
 
