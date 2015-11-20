@@ -4,7 +4,7 @@ Donate link:
 Tags: authentication, active directory, ldap, authorization, security, windows, avatar, photo
 Requires at least: 3.0
 Tested up to: 4.3.1
-Stable tag: 0.6
+Stable tag: 1.06
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ Plugin asset icons by Freepik's Flaticons (http://www.flaticon.com/) and license
 
 
 == Changelog ==
+= 1.06 =
+* BuddyPress avatars can now be replaced through simple settings
+
 = 1.0 =
 * Switched to WordPress endpoint structure
 * Allow replacing of default avatar with the active directory thumbnails
